@@ -6,7 +6,7 @@ interface User {
 }
 
 interface UserSearchProps {
-  users: User[]
+  users: User[];
 }
 
 interface UserSearchState {
@@ -16,8 +16,8 @@ interface UserSearchState {
 
 class UserSearch extends Component<UserSearchProps> {
   state: UserSearchState = {
-    name: '',
-    user: undefined
+    name: "",
+    user: undefined,
   };
 
   onClick = () => {
@@ -32,14 +32,17 @@ class UserSearch extends Component<UserSearchProps> {
     const { name, user } = this.state;
     return (
       <div>
-      User Search
-      <input value={name} onChange={(e) => this.setState({name: e.target.value})} />
-      <button onClick={this.onClick}>Find User</button>
-      <div>
-        {user && user.name}
-        {user && user.age}
+        User Search
+        <input
+          value={name}
+          onChange={(e) => this.setState({ name: e.target.value })}
+        />
+        <button onClick={this.onClick}>Find User</button>
+        <div>
+          {user && user.name}
+          {user && user.age}
+        </div>
       </div>
-    </div>
     );
   }
 }
