@@ -11,7 +11,7 @@ const initialState = {
   loading: false,
   error: null,
   data: [],
-}
+};
 
 const reducer = (
   state: RepositoriesState = initialState,
